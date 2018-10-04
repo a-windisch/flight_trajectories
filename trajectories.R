@@ -23,11 +23,15 @@ ls1 <- 2580
 le1 <- 2622
 ldg1data <- dat1[ls1:le1,]
 
+#taxiing 2 start and end indices (empiricallY)
+ts2 <- 110800
+te2 <- 126500
+taxi2data <- dat2[ts2:te2,]
+
 #load leaflet
 library(leaflet)
 library(mapview)
 library(geosphere)
-
 
 
 #create plots for flt1
@@ -67,6 +71,13 @@ fullmap2 <- leaflet(dat2) %>%
     addCircles(~lon, ~lat, weight = 3, radius=40, 
                color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
 mapshot(fullmap2,file="flight2_map.png")
+
+taximap2 <- leaflet(taxi2data) %>% 
+   addTiles() %>%
+   addCircles(~lon, ~lat, weight = 3, radius=1, 
+              color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
+mapshot(taximap2,file="taxi2_map.png")
+
 
 #create plots for flt3
 fullmap3 <- leaflet(dat3) %>% 

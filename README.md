@@ -12,7 +12,7 @@ This file contains data recorded on October 29 2017 when flying a Cessna 152 (N5
 ![](flight1_map.png)
 
 #### DA20-C1_N107TX_KSUS_to_1H3_2018-07-17.csv   
-This file contains data recorded on July 17 2018 when flying a Diamond Aircraft DA-20 C1 Eclipse (N107TX) from Spirit of St. Louis Airport (KSUS) to State Technical College of Missouri Airport (1H3). The data covers both, the trip to 1H3 and back to KSUS. I started out with full tanks, and I was the only occupant of the plane. When closing in on 1H3 I had to choose a lower altitude because of the ceilings becoming lower to the west. At 1H3, I executed 2 go-around maneuvers and one touch-and-go. After that, I flew straight back to KSUS. Here is the map of the recorded flight.   
+This file contains data recorded on July 17 2018 when flying a Diamond Aircraft DA-20 C1 Eclipse (N107TX) from Spirit of St. Louis Airport (KSUS) to State Technical College of Missouri Airport (1H3). The data covers both, the trip to 1H3 and back to KSUS. Note that on this flight, I turned on the recording a short while after departure from KSUS, so taxiing and takeoff at KSUS is not included. However, taxiing after landing is available. I started out with full tanks, and I was the only occupant of the plane. When closing in on 1H3 I had to choose a lower altitude because of the ceilings becoming lower to the west. At 1H3, I executed 2 go-around maneuvers and one touch-and-go. After that, I flew straight back to KSUS. Here is the map of the recorded flight.   
 ![](flight2_map.png)
 
 #### DA20-C1_N107TX_KSUS_to_KMYJ_2018-09-15.csv 
@@ -31,13 +31,17 @@ This R-script contains the sources used to produce the plots. I wrote comments w
 Those files have been produced by the R-script trajectories.R. They contain Open Streetmap images and other plots produced in the course of the analysis
 
 
-### 2 A closer look at flight number 1 (KCPS to KSLO)
+### 2 Final approach to KSLO (flight 1)
 One interesting aspect to look into is, for example, the quality of the descent for the touch-and-go maneuver. I therefore isolated the data that corresponds to the final approach for Runway 18 at KSLO and clipped it off at touch-down, where I determined this point by eyeballing the altitude data. Here are the data points in question, displayed on Open Streetmap.   
 ![](landing1_map.png)
 
 When flying a stabilized approach, one should try to establish a constant descent rate throughout the approach, so, under ideal conditions, this would amount to a linear function (up to the point of flare). Here is a plot of the altitude profile of the short final approach to RW 18 at KSLO in meters MSL as a function of the touch down point on the runway, also in meters.  
 ![](ldg1.png)
    
+### 3 Taxiing after arriving at KSUS (flight 2)
+Open Streetmap does an amazing job in providing detailed maps. Even the taxiway designations are correctly included, which allows you to extract the exact route you took when taxiing in or out. Here is an example of the taxi route after the landing at KSUS (Runway 8L) to the FBO Million Air, located just opposite of TW A6. Here is the map.
+![](taxi2_map.png)
+      
 
 
       
