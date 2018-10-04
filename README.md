@@ -18,4 +18,23 @@ This file contains data recorded on July 17 2018 when flying a Diamond Aircraft 
 #### DA20-C1_N107TX_KSUS_to_KMYJ_2018-09-15.csv 
 This file contains data recorded on September 15 2018 when flying a Diamond Aircraft DA-20 C1 Eclipse (N107TX) from Spirit of St. Louis Airport (KSUS) to Mexico Memorial Airport (KMYJ). I started out at KSUS with full tanks and I was the sole occupant of the aircraft. The flight was uneventful. I executed a touch-and-go maneuver at KMYJ and flew straight back to KSUS. Here is the map of the full recording. 
 ![](flight3_map.png)
+
+
+#### README.md   
+This file.   
+   
+
+#### trajectories.R   
+This R-script contains the sources used to produce the plots. I wrote comments where appropriate. If you have any questions, just write me an email using the address provided above.   
+   
+#### \*.png
+Those files have been produced by the R-script trajectories.R. They contain Open Streetmap images and other plots produced in the course of the analysis
+
+
+### 2 A closer look at flight number 1 (KCPS to KSLO)
+One interesting aspect to look into is, for example, the quality of the descent for the touch-and-go maneuver. I therefore isolated the data that corresponds to the final approach for Runway 18 at KSLO and clipped it off at touch-down, where I determined this point by eyeballing the altitude data. When flying a stabilized approach, one should try to establish a constant descent rate throughout the approach, so, under ideal conditions, this would amount to a linear function (up to the point of flare). Here is a plot of the altitude profile of the short final approach to RW 18 at KSLO in meters MSL as a function of the touch down point on the runway, also in meters.  
+![](ldg1.png)
+   
+
+
       

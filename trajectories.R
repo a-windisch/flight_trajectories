@@ -26,6 +26,8 @@ ldg1data <- dat1[ls1:le1,]
 #load leaflet
 library(leaflet)
 library(mapview)
+library(geosphere)
+
 
 
 #create plots for flt1
@@ -41,6 +43,23 @@ ldgmap1 <- leaflet(ldg1data) %>%
             addTiles() %>%
             addCircles(~lon, ~lat, weight = 3, radius=40, color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
 mapshot(ldgmap1,file="landing1_map.png")
+
+
+#calculating the distance form the touch-down point
+#for this procedure I followed a blog post by Mark Needham, 
+#markhneedham.com
+tmpcol1 <- rep(tail(ldg1data$lon,n=1),length(ldg1data$lat))
+tmpcol2 <- rep(tail(ldg1data$lat,n=1),length(ldg1data$lat))
+ldg1coords <- ldg1data[,c(2,1)]
+ldg1touchdown <- data.frame(tmpcol1,tmpcol2)
+ldg1dist <- by(ldg1coords,1:nrow(ldg1coords),function(row) { distm(c(row$lon,row$lat),ldg1touchdown[1,]) })
+ldg1fit  <- lm(ldg1data$alt~ldg1dist)
+
+#create the plot 
+png(filename = "ldg1.png",width = 640, height = 480)
+plot(x=ldg1dist,y=ldg1data$alt,main="Descent on final approach RW18, KSLO",xlab="dist from touch down point [m]", ylab = "altitude [m MSL]")
+abline(ldg1fit,col="red")
+dev.off()
 
 #create plots for flt2
 fullmap2 <- leaflet(dat2) %>% 
