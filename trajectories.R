@@ -41,7 +41,7 @@ mapshot(fullmap1,file="flight1_map.png")
 
 ldgmap1 <- leaflet(ldg1data) %>% 
             addTiles() %>%
-            addCircles(~lon, ~lat, weight = 3, radius=40, color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
+            addCircles(~lon, ~lat, weight = 3, radius=20, color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
 mapshot(ldgmap1,file="landing1_map.png")
 
 
