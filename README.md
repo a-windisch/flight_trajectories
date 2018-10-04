@@ -35,7 +35,7 @@ Those files have been produced by the R-script trajectories.R. They contain Open
 One interesting aspect to look into is, for example, the quality of the descent for the touch-and-go maneuver. I therefore isolated the data that corresponds to the final approach for Runway 18 at KSLO and clipped it off at touch-down, where I determined this point by eyeballing the altitude data. Here are the data points in question, displayed on Open Streetmap.   
 ![](landing1_map.png)
 
-When flying a stabilized approach, one should try to establish a constant descent rate throughout the approach, so, under ideal conditions, this would amount to a linear function (up to the point of flare). Here is a plot of the altitude profile of the short final approach to RW 18 at KSLO in meters MSL as a function of the touch down point on the runway, also in meters.  
+When flying a stabilized approach, one should try to establish a constant descent rate throughout the approach, so, under ideal conditions, this would amount to a linear function (up to the point of flare). Here is a plot of the altitude profile of the short final approach to RW 18 at KSLO in meters MSL as a function of distance to the touch down point on the runway, also in meters.  
 ![](ldg1.png)
    
 ### 3 Taxiing after arriving at KSUS (flight 2)
