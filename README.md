@@ -3,7 +3,7 @@
    
 ### 0 Synopsis   
 In this repository, I collect and analyze some of the data that I recorded from the sensors of my cell phone when plioting general aviation aircraft. Apart from position (WGS84), I also recorded altitude, magnetic heading, ground speed, and data from the accelerometers.
-Feel free to use the data as you please. You can also find and connect with me on [LinkedIn](https://www.linkedin.com/in/andreas-windisch-physics/)).
+Feel free to use the data as you please. You can contact me using andreas.windisch@yahoo.com. You can also find and connect with me on [LinkedIn](https://www.linkedin.com/in/andreas-windisch-physics/).
 
 ### 1 Data Files in this repository   
 
@@ -15,6 +15,7 @@ This file contains data recorded on October 29 2017 when flying a Cessna 152 (N5
 This file contains data recorded on July 17 2018 when flying a Diamond Aircraft DA-20 C1 Eclipse (N107TX) from Spirit of St. Louis Airport (KSUS) to State Technical College of Missouri Airport (1H3). The data covers both, the trip to 1H3 and back to KSUS. I started out with full tanks, and I was the only occupant of the plane. When closing in on 1H3 I had to choose a lower altitude because of the ceilings becoming lower to the west. At 1H3, I executed 2 go-around maneuvers and one touch-and-go. After that, I flew straight back to KSUS. Here is the map of the recorded flight.   
 ![](flight2_map.png)
 
-#### DA20-C1_N107TX_KSUS_to_KMYJ_2018-09-15.csv  
-
+#### DA20-C1_N107TX_KSUS_to_KMYJ_2018-09-15.csv 
+This file contains data recorded on September 15 2018 when flying a Diamond Aircraft DA-20 C1 Eclipse (N107TX) from Spirit of St. Louis Airport (KSUS) to Mexico Memorial Airport (KMYJ). I started out at KSUS with full tanks and I was the sole occupant of the aircraft. The flight was uneventful. I executed a touch-and-go maneuver at KMYJ and flew straight back to KSUS. Here is the map of the full recording. 
+![](flight3_map.png)
       
