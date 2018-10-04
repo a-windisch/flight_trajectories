@@ -1,4 +1,11 @@
-setwd("/home/andreas/flight_trajectories/R_scripts/")
+##################################################
+##        Flight Trajectory Analysis            ##
+##                    2018                      ##
+## Andreas Windisch, andreas.windisch@yahoo.com ##
+##################################################
+setwd("/home/andreas/GitHub/flight_trajectories/")
+
+
 
 #load flight data and get relevant columns
 flt1<-read.csv("C152_N53398_KCPS_to_KSLO_2017-10-29.csv")
@@ -18,25 +25,33 @@ ldg1data <- dat1[ls1:le1,]
 
 #load leaflet
 library(leaflet)
+library(mapview)
+
 
 #create plots for flt1
 fullmap1 <- leaflet(dat1) %>% 
     addTiles() %>%
     addCircles(~lon, ~lat, weight = 3, radius=40, 
                color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
- 
- ldgmap1 <- leaflet(ldg1data) %>% 
+
+mapshot(fullmap1,file="flight1_map.png")
+
+
+ldgmap1 <- leaflet(ldg1data) %>% 
             addTiles() %>%
             addCircles(~lon, ~lat, weight = 3, radius=40, color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
- 
- #create plots for flt2
- fullmap2 <- leaflet(dat2) %>% 
+mapshot(ldgmap1,file="landing1_map.png")
+
+#create plots for flt2
+fullmap2 <- leaflet(dat2) %>% 
     addTiles() %>%
     addCircles(~lon, ~lat, weight = 3, radius=40, 
                color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
- 
- #create plots for flt3
- fullmap3 <- leaflet(dat3) %>% 
+mapshot(fullmap2,file="flight2_map.png")
+
+#create plots for flt3
+fullmap3 <- leaflet(dat3) %>% 
     addTiles() %>%
     addCircles(~lon, ~lat, weight = 3, radius=40, 
                color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
+mapshot(fullmap3,file="flight3_map.png")
