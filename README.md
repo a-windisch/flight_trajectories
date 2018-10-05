@@ -42,6 +42,17 @@ When flying a stabilized approach, one should try to establish a constant descen
 Open Streetmap does an amazing job in providing detailed maps. Even the taxiway designations are correctly included, which allows you to extract the exact route you took when taxiing in or out. Here is an example of the taxi route after the landing at KSUS (Runway 8L) to the FBO Million Air, located just opposite of TW A6. Here is the map.
 ![](taxi2_map.png)
       
+### 4 How far down the runway did I touch down? (flight 1)
+As a pilot, I am also interested in where the touch-down point on the runway is, since it tells me how much of the runway I did not use and how much I have left. From the data extracted in Section 2, we can simply compute the distance between the touch-down point and the beginning of the runway. The geo position of the latter can be extracted with just one click using Google Maps or OpenStreetMaps. For the landing under consideration, RW18 at KSLO, it turns out the the northern edge of the runway is at lat 38.648504, lon -88.964145. 
+In this case, the point of touchdown is around 246 meters down the runway. For details, have a look at the R-script trajectories.R.
+   
+### 5 How good was the alignment with RW18 throughout the approach? (flight 1)
+By looking at the recorded variable 'locationcourse' we can extract the distribution (spread) of the course on final approach, where I am again considering the landing discussed in Section 2. Here is a density plot that shows the distribution.   
+![](ldg1hdg.png)   
+The distribution has a stronger tail on the right, which is probably because I turned to final from the west. This would explain the presence of values larger than 180 if I included some portion of the flight path where the turn to final was not over yet. The overall spread of the bigger peak indicates a fairly small variation throughout the approach. Cross wind should not affect the measurement. Note that I haven't accounted for any errors of the cell phone's sensors here. 
+   
+      
 
+     
 
       

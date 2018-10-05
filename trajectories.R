@@ -85,3 +85,16 @@ fullmap3 <- leaflet(dat3) %>%
     addCircles(~lon, ~lat, weight = 3, radius=40, 
                color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
 mapshot(fullmap3,file="flight3_map.png")
+
+#compute touch-down point for landing at RW18 at KSLO
+#northern runway edge located at lat 38.648504, lon -88.964145 (Google Maps)
+rwlat <- 38.648504
+rwlon <- -88.964145
+ldgdist <- distm(c(rwlon,rwlat),ldg1touchdown[1,])
+cat("Point of touch-down after ", ldgdist, " m\n")
+
+#generate a density plot of the flown course on final approach
+#for RW18 at KSLO.
+png(filename = "ldg1hdg.png",width = 640, height = 480)
+plot(density(flt1$locationCourse...[ls1:le1]),main="Course value distribution on final approach RW18, KSLO",xlab="course [deg]")
+dev.off()
