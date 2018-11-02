@@ -11,12 +11,18 @@ setwd("/home/andreas/GitHub/flight_trajectories/")
 flt1<-read.csv("C152_N53398_KCPS_to_KSLO_2017-10-29.csv")
 flt2<-read.csv("DA20-C1_N107TX_KSUS_to_1H3_2018-07-17.csv")
 flt3<-read.csv("DA20-C1_N107TX_KSUS_to_KMYJ_2018-09-15.csv")
+flt4<-read.csv("DA20-C1_N107TX_KSUS_to_KFYG_2018-10-15.csv")
+flt5<-read.csv("DA20-C1_N107TX_KSUS_sightseeing_2018-10-17.csv")
 dat1<-flt1[,c(6,7,8,9,19)]
 dat2<-flt2[,c(6,7,8,9,19)]
 dat3<-flt3[,c(6,7,8,9,19)]
+dat4<-flt4[,c(6,7,8,9,19)]
+dat5<-flt5[,c(6,7,8,9,19)]
 names(dat1) <- c("lat","lon","alt","spd","hdg")
 names(dat2) <- c("lat","lon","alt","spd","hdg")
 names(dat3) <- c("lat","lon","alt","spd","hdg")
+names(dat4) <- c("lat","lon","alt","spd","hdg")
+names(dat5) <- c("lat","lon","alt","spd","hdg")
 
 #landing 1 start and end indices (empirically) 
 ls1 <- 2580
@@ -27,6 +33,31 @@ ldg1data <- dat1[ls1:le1,]
 ts2 <- 110800
 te2 <- 126500
 taxi2data <- dat2[ts2:te2,]
+
+#steep turn start and end indices (empirically)
+sts4 <- 3603
+ste4 <- 3780
+steepturn4data <- dat4[sts4:ste4,]
+
+#power-off stall start and end indices (empirically)
+poffsts4 <- 3000
+poffste4 <- 3085
+poweroffstall4data <- dat4[poffsts4:poffste4,]
+
+#power-on stall start and end indices (empirically)
+ponsts4 <- 3250
+ponste4 <- 3320
+poweronstall4data <- dat4[ponsts4:ponste4,]
+
+#power-off landing, simulated engine failure indices (empirically)
+poldgs4 <- 3800
+poldge4 <- 4440
+poweroffldg4data <- dat4[poldgs4:poldge4,]
+
+#no-flap landing start and end indices (empirically)
+nfldgs4 <- 4620
+nfldge4 <- 5050
+noflapldg4data <- dat4[nfldgs4:nfldge4,]
 
 #load leaflet
 library(leaflet)
@@ -98,3 +129,23 @@ cat("Point of touch-down after ", ldgdist, " m\n")
 png(filename = "ldg1hdg.png",width = 640, height = 480)
 plot(density(flt1$locationCourse...[ls1:le1]),main="Course value distribution on final approach RW18, KSLO",xlab="course [deg]")
 dev.off()
+
+#create plots for flt4
+fullmap4 <- leaflet(dat4) %>% 
+   addTiles() %>%
+   addCircles(~lon, ~lat, weight = 3, radius=40, 
+              color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
+mapshot(fullmap4,file="flight4_map.png")
+
+steepturnmap4 <- leaflet(steepturn4data) %>% 
+   addTiles() %>%
+   addCircles(~lon, ~lat, weight = 3, radius=1, 
+              color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
+mapshot(steepturnmap4,file="steep_turn_map.png")
+
+#create plots for flt5
+fullmap5 <- leaflet(dat5) %>% 
+   addTiles() %>%
+   addCircles(~lon, ~lat, weight = 3, radius=40, 
+              color="#ff0000", stroke = TRUE, fillOpacity = 0.8)
+mapshot(fullmap5,file="flight5_map.png")

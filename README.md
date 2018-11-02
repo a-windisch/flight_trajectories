@@ -17,8 +17,16 @@ This file contains data recorded on July 17 2018 when flying a Diamond Aircraft 
 
 #### DA20-C1_N107TX_KSUS_to_KMYJ_2018-09-15.csv 
 This file contains data recorded on September 15 2018 when flying a Diamond Aircraft DA-20 C1 Eclipse (N107TX) from Spirit of St. Louis Airport (KSUS) to Mexico Memorial Airport (KMYJ). I started out at KSUS with full tanks and I was the sole occupant of the aircraft. The flight was uneventful. I executed a touch-and-go maneuver at KMYJ and flew straight back to KSUS. Here is the map of the full recording. 
-![](flight3_map.png)
+![](flight3_map.png)   
 
+#### DA20-C1_N107TX_KSUS_to_KFYG_2018_10_15.csv   
+This file contains data recorded on October 15 2018 when I took a biennial flight review with Hans Brosbol. The aircraft was a DA-20 C1 Eclipse. The flight consisted of a normal takeoff and climb out at KSUS (RW 26L), followed by slow flight, a power-off stall, two power-on stalls, steep turns, a simulated engine failure and power-off landing at Washington Regional Airport (KFYG), a no-flap landing at KFYG, and finally a normal landing at KSUS, again using 26L. It was a stunningly calm day, and for the second half of the flight the sun was already below the horizon. Thank you, Hans, for this amazing flight!
+![](flight4_map.png)   
+
+#### DA20-C1_N107TX_KSUS_sightseeing_2018_10_17.csv   
+This file contains data recorded on October 17 2018 when taking a short sightseeing flight with a passenger in a DA-20 C1 Eclipse. The flight consisted of a normal takeoff and climb out at KSUS (RW 26L). The flight was uneventful and took us up north to the Winfield Dam, above which I turned back to the south west with intention of flying down to Washington Regional Airport. However, the air was so bumpy, that the ride wasn't very enjoyable, so I decided to head back to KSUS. On final for 26L, the tower reported wind variable at 4 kts with gusts 18 kts. The latter figure increased throughout my approach, and the landing wasn't pretty (but safe). 
+![](flight5_map.png)   
+ 
 
 #### README.md   
 This file.   
@@ -51,7 +59,14 @@ By looking at the recorded variable 'locationcourse' we can extract the distribu
 ![](ldg1hdg.png)   
 The distribution has a stronger tail on the right, which is probably because I turned to final from the west. This would explain the presence of values larger than 180 if I included some portion of the flight path where the turn to final was not over yet. The overall spread of the bigger peak indicates a fairly small variation throughout the approach. Cross wind should not affect the measurement. Note that I haven't accounted for any errors of the cell phone's sensors here. 
    
-      
+### 6 Steep Turns (flight 4)) 
+Here is the trajectory of my steep turns. I started out with a turn to the left, and after completing the 360 I rolled into a right turn for another 360.    
+![](steep_turn_map.png)   
+
+
+   
+     
+         
 
      
 
