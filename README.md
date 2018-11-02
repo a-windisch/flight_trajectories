@@ -59,7 +59,7 @@ By looking at the recorded variable 'locationcourse' we can extract the distribu
 ![](ldg1hdg.png)   
 The distribution has a stronger tail on the right, which is probably because I turned to final from the west. This would explain the presence of values larger than 180 if I included some portion of the flight path where the turn to final was not over yet. The overall spread of the bigger peak indicates a fairly small variation throughout the approach. Cross wind should not affect the measurement. Note that I haven't accounted for any errors of the cell phone's sensors here. 
    
-### 6 Steep Turns (flight 4)) 
+### 6 Steep Turns (flight 4) 
 Here is the trajectory of my steep turns. I started out with a turn to the left, and after completing the 360 I rolled into a right turn for another 360.    
 ![](steep_turn_map.png)   
 
